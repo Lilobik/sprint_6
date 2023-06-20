@@ -9,6 +9,7 @@ import static org.junit.Assert.assertEquals;
 public class FelineTest {
     Feline feline = new Feline();
     List<String> expectedFood = List.of("Животные", "Птицы", "Рыба");
+    private final int expectedKittensCount = 1;
     @Test
     public void eatMeat() throws Exception {
         assertEquals(expectedFood, feline.eatMeat());
@@ -19,6 +20,6 @@ public class FelineTest {
     }
     @Test
     public void getKittensNoCount() {
-        assertEquals(1, feline.getKittens());
+        assertEquals(expectedKittensCount, feline.getKittens());
     }
 }
